@@ -4,7 +4,16 @@
 
 ## Acessando
 
+> O resultado pode ser acessado no link abaixo.
+> Login: enrique, senha: 123456
+
 [teste-cnncta.surge.sh](http://teste-cnncta.surge.sh)
+
+## APK
+
+> Gerei um apk bem simples
+> Pode ser baixado para testes aqui: [Baixar APK](https://drive.google.com/open?id=1kupe_ThyV_HR5oQCQIoGTISbC97fwuH3)
+> Lembrando que para instalar o apk, precisa liberar instalação por terceiros nas configurações.
 
 ## O que faltou
 
