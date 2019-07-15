@@ -1,26 +1,34 @@
 <template>
-  <div class="row items-start q-gutter-md">
-    <q-card v-for="(post, index) in posts" :key="index" bordered class="bg-primary my-card">
-      <div @click="apagarPost(post.id)" v-if="edit" class="delete-post">
-        <i class="fas fa-times"></i>
-      </div>
-      <img v-if="post.image" :src="`http://desenvolvimento.cnncta.com.br${post.image}`" alt="Imagem">
-      <q-card-section>
-        <div class="text-h6">{{post.title}}</div>
-        <div class="text-subtitle2">por {{post.user.username}}</div>
-        <div class="text-caption">{{formataData(post.created_at)}}</div>
-      </q-card-section>
+  <div>
+    <div v-if="posts" class="row items-start justify-center q-gutter-md">
+      <q-card v-for="(post, index) in posts" :key="index" bordered class="bg-primary my-card">
+        <div @click="apagarPost(post.id)" v-if="edit" class="delete-post">
+          <i class="fas fa-times"></i>
+        </div>
+        <img v-if="post.image" :src="`http://desenvolvimento.cnncta.com.br${post.image}`" alt="Imagem">
+        <q-card-section>
+          <div class="text-h6">{{post.title}}</div>
+          <div class="text-subtitle2">por {{post.user.username}}</div>
+          <div class="text-caption">{{formataData(post.created_at)}}</div>
+        </q-card-section>
 
-      <q-separator />
+        <q-separator />
 
-      <q-card-section>
-        {{ post.text }}
-      </q-card-section>
+        <q-card-section>
+          {{ post.text }}
+        </q-card-section>
 
-      <q-card-actions v-if="edit">
-        <q-btn @click="editarPost(post)" flat class="text-yellow-10">Editar</q-btn>
-      </q-card-actions>
-    </q-card>
+        <q-card-actions v-if="edit">
+          <q-btn @click="editarPost(post)" flat class="text-yellow-10">Editar</q-btn>
+        </q-card-actions>
+      </q-card>
+    </div>
+    <div v-else class="loading-spinner">
+      <q-spinner-cube
+        color="primary"
+        size="5em"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -37,7 +45,8 @@ export default {
     edit: {
       type: Boolean,
       default: false
-    }
+    },
+    loadingPosts: {}
   },
   mixins: [utilsMixins],
   data () {
@@ -96,4 +105,9 @@ export default {
   min-height 205px
   >>>.q-separator
     background-color $yellow-10
+.loading-spinner
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
 </style>

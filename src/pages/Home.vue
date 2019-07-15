@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md flex">
-    <posts :posts="posts" />
+    <posts :posts="posts" :loadingPosts="loading.posts" />
   </q-page>
 </template>
 
@@ -18,14 +18,19 @@ export default {
   },
   data () {
     return {
-      posts: undefined
+      posts: undefined,
+      loading: {
+        posts: false
+      }
     }
   },
   methods: {
     getPosts () {
+      this.loading.posts = true
       getGalery().then(responseGetGalery => {
         if (responseGetGalery.status === 200) {
           this.posts = responseGetGalery.data.data.posts
+          this.loading.posts = false
         }
       })
     }

@@ -52,6 +52,7 @@ module.exports = function (ctx) {
         'QPage',
         'QSeparator',
         'QSpinner',
+        'QSpinnerCube',
         'QToolbar',
         'QToolbarTitle',
         'QUploader'
