@@ -14,6 +14,7 @@
 > Gerei um apk bem simples
 > Pode ser baixado para testes aqui: [Baixar APK](https://drive.google.com/open?id=1kupe_ThyV_HR5oQCQIoGTISbC97fwuH3)
 > Lembrando que para instalar o apk, precisa liberar instalação por terceiros nas configurações.
+> PS1: Pode haver algum problema em androids com a versão 9, por essa versão já não aceitar requisições que não as https.
 
 ## O que faltou
 
