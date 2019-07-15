@@ -1,0 +1,71 @@
+// app global css
+.q-field
+  width 275px
+  .q-field__control
+    min-height 40px
+  input
+    font-size 12px
+    font-family $font-primary
+    font-weight 600
+    color $white
+    &::placeholder
+      font-size 12px
+      font-family $font-primary
+      font-weight 600
+      color $primary
+  .icon-password
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    right 10px
+.display-none
+  display none
+  @media (min-width: 1023px)
+    display flex
+.cursor-pointer
+  cursor pointer
+.input-styled
+  .q-field__control
+    color transparent
+    input, textarea
+      text-align center
+      color $primary
+    i.text-negative
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      right 5px
+      display none
+    &::before, &::after
+      border-bottom none!important
+      color transparent
+  .q-field__bottom
+    color $yellow-10
+.input-styled-file
+  .q-field__control
+    background-color: transparent!important
+    color transparent
+  &::before, &::after
+      border-bottom none!important
+      color transparent
+
+//Colors
+.text-white {
+  color $white!important
+}
+.bg-white {
+  background-color $white!important
+}
+.text-dark {
+  color $dark!important
+}
+.bg-dark {
+  background-color $dark!important
+}
+
+.text-primary {
+  color $primary!important
+}
+.bg-primary {
+  background-color $primary!important
+}
